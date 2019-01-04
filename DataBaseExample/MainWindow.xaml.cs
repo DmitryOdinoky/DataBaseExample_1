@@ -18,6 +18,9 @@ namespace DataBaseExample
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    ///
+    
+
     public partial class MainWindow : Window
     {   
         LINQtoSQLClassDataContext dc = new LINQtoSQLClassDataContext(
@@ -34,6 +37,18 @@ namespace DataBaseExample
             dc.SubmitChanges();
         }
 
-        //foo
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItem = DataGrid1.SelectedItem;
+
+            if (selectedItem != null)
+            {
+                DataGrid1.Items.Remove(selectedItem);
+            }
+        }
+
+        
+
+
     }
 }

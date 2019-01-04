@@ -11,7 +11,8 @@
             <ColumnDefinition Width="145*"/>
             <ColumnDefinition Width="119*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="DataGrid1" Grid.ColumnSpan="2"></DataGrid>
-        <Button Name="SaveButton" Click="SaveButton_Click" Content="SAVE" Margin="0,320,0,0" Grid.ColumnSpan="2"></Button>
+        <DataGrid ItemsSource="{Binding Listeners}" Name="DataGrid1" Grid.ColumnSpan="2"></DataGrid>
+        <Button Name="SaveButton" Click="SaveButton_Click" Content="SAVE" Margin="0,320,275,0"/>
+        <Button x:Name="DeleteButton" Click="DeleteButton_Click" Content="DELETE" Margin="160,320,115,0"/>
     </Grid>
 </Window>
